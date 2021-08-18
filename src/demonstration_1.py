@@ -23,4 +23,17 @@ if there is a mathematical approach that you can take.*
 """
 def to_lower_case(string):
     # Your code here
+    new_string = ""
+    for char in string:
+        if ord(char) >= 65 and ord(char) <= 90:
+            new_string += chr(ord(char) + 32)
+        else:
+            new_string += char
+        
+    return new_string
+
+print(to_lower_case("LambdaSchool"))
+print(to_lower_case("austen"))
+print(to_lower_case("LLAMA"))
+
 
